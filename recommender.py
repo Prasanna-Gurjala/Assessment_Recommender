@@ -1,11 +1,10 @@
-# recommender.py
+from sentence_transformers import SentenceTransformer
+import numpy as np
 import faiss
 import pickle
-import numpy as np
-from sentence_transformers import SentenceTransformer
 
-# Load the sentence transformer model (same one used before)
-model = SentenceTransformer('all-MiniLM-L6-v2')
+# ✅ Use a smaller model that loads faster
+model = SentenceTransformer('paraphrase-MiniLM-L3-v2')
 
 # Load FAISS index
 index = faiss.read_index("shl_index.faiss")
