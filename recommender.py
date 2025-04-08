@@ -4,7 +4,8 @@ import faiss
 import pickle
 
 # ✅ Use a smaller model that loads faster
-model = SentenceTransformer('./all-MiniLM-L6-v2')
+model = SentenceTransformer('models/all-MiniLM-L6-v2')
+
 
 
 # Load FAISS index
